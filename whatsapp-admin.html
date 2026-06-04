@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de QR por WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="utility-page utility-page--admin">
+    <main class="utility-shell">
+        <section class="utility-card utility-card--admin">
+            <div class="section-heading section-heading--left">
+                <p class="eyebrow">Painel privado</p>
+                <h1 id="admin-title"></h1>
+                <p class="utility-copy" id="admin-text"></p>
+            </div>
+
+            <form class="admin-search" id="admin-search-form">
+                <div class="form-group">
+                    <label for="admin-phone-search" id="admin-search-label"></label>
+                    <input
+                        type="text"
+                        id="admin-phone-search"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        placeholder=""
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="button button--solid" id="admin-search-btn"></button>
+            </form>
+
+            <p class="form-status" id="admin-message" role="status" aria-live="polite"></p>
+
+            <div class="admin-layout" id="admin-result" hidden>
+                <section class="admin-card">
+                    <p class="eyebrow">Convidado localizado</p>
+                    <h2 id="admin-guest-name"></h2>
+                    <p class="admin-meta" id="admin-guest-phone"></p>
+                    <p class="admin-meta" id="admin-guest-status"></p>
+                    <p class="admin-meta" id="admin-guest-link"></p>
+
+                    <div class="utility-actions">
+                        <button type="button" class="button button--ghost" id="copy-link-btn"></button>
+                        <button type="button" class="button button--ghost" id="download-qr-btn"></button>
+                        <button type="button" class="button button--solid" id="open-whatsapp-btn"></button>
+                        <button type="button" class="button button--ghost" id="share-qr-btn"></button>
+                        <button type="button" class="button button--ghost" id="send-api-btn" hidden></button>
+                    </div>
+                </section>
+
+                <section class="admin-card admin-card--qr">
+                    <p class="eyebrow">QR Code</p>
+                    <div class="qr-preview" id="qr-preview"></div>
+                </section>
+
+                <section class="admin-card admin-card--message">
+                    <p class="eyebrow">Mensagem do WhatsApp</p>
+                    <pre class="message-preview" id="message-preview"></pre>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="whatsapp-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status do Convidado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="utility-page utility-page--status">
+    <main class="utility-shell">
+        <section class="utility-card utility-card--status">
+            <p class="eyebrow">QR personalizado</p>
+            <h1 id="status-title"></h1>
+            <p class="utility-copy" id="status-text"></p>
+
+            <div class="status-panel status-panel--loading" id="status-panel">
+                <span class="status-badge" id="status-badge">Carregando...</span>
+                <h2 id="guest-name">Verificando convidado...</h2>
+                <p id="guest-detail"></p>
+                <p id="guest-event"></p>
+            </div>
+
+            <div class="utility-actions">
+                <button type="button" class="button button--solid" id="speak-status-btn">
+                    Ouvir novamente
+                </button>
+                <a class="button button--ghost" href="index.html">
+                    Voltar ao convite
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="status.js"></script>
+</body>
+</html>
