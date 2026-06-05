@@ -63,6 +63,7 @@
         { "id": "erik-bollaert", "nome": "Erik Bollaert", "familia": "Erik Bollaert", "maximo_convidados": 2, "telefone_ultimos4": "1761", "status": "" },
         { "id": "mariana-toro", "nome": "Mariana Toro", "familia": "Mariana Toro", "maximo_convidados": 1, "telefone_ultimos4": "7552", "status": "" },
         { "id": "vinicius-morani", "nome": "Vinicius Morani", "familia": "Vinicius Morani", "maximo_convidados": 1, "telefone_ultimos4": "0319", "status": "" },
-        { "id": "bruno-salgado", "nome": "Bruno Salgado", "familia": "Bruno Salgado", "maximo_convidados": 1, "telefone_ultimos4": "0336", "status": "" }
+        { "id": "bruno-salgado", "nome": "Bruno Salgado", "familia": "Bruno Salgado", "maximo_convidados": 1, "telefone_ultimos4": "0336", "status": "" },
+        { "id": "pedro-santos", "nome": "Pedro Santos", "familia": "Pedro Santos", "maximo_convidados": 1, "telefone_ultimos4": "9012", "status": "", "qr_liberado": true }
     ]
 }
