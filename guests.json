@@ -32,7 +32,7 @@
         { "id": "lucimar-adao", "nome": "Lucimar Adão", "familia": "Lucimar Adão", "maximo_convidados": 1, "telefone_ultimos4": "4580", "status": "" },
         { "id": "tania-rinaldi", "nome": "Tania Rinaldi", "familia": "Tania Rinaldi", "maximo_convidados": 1, "telefone_ultimos4": "3062", "status": "" },
         { "id": "leticia-costa", "nome": "Leticia Costa", "familia": "Leticia Costa", "maximo_convidados": 2, "telefone_ultimos4": "6622", "status": "" },
-        { "id": "luciana-feijo", "nome": "Luciana Feijo", "familia": "Luciana Feijo", "maximo_convidados": 6, "telefone_ultimos4": "1828", "status": "" },
+        { "id": "luciana-feijo", "nome": "Luciana Feijó", "familia": "Luciana Feijó", "maximo_convidados": 6, "telefone_ultimos4": "5817", "status": "" },
         { "id": "cristiane-alo", "nome": "Cristiane Aló", "familia": "Cristiane Aló", "maximo_convidados": 4, "telefone_ultimos4": "4508", "status": "" },
         { "id": "fernanda-passos", "nome": "Fernanda Passos", "familia": "Fernanda Passos", "maximo_convidados": 2, "telefone_ultimos4": "8172", "status": "" },
         { "id": "rafael-xavier", "nome": "Rafael Xavier", "familia": "Rafael Xavier", "maximo_convidados": 3, "telefone_ultimos4": "3098", "status": "" },
@@ -61,9 +61,10 @@
         { "id": "cristina-delou", "nome": "Cristina Delou", "familia": "Cristina Delou", "maximo_convidados": 2, "telefone_ultimos4": "4262", "status": "" },
         { "id": "claudio-leitao", "nome": "Claudio Leitão", "familia": "Claudio Leitão", "maximo_convidados": 4, "telefone_ultimos4": "5599", "status": "" },
         { "id": "erik-bollaert", "nome": "Erik Bollaert", "familia": "Erik Bollaert", "maximo_convidados": 2, "telefone_ultimos4": "1761", "status": "" },
-        { "id": "mariana-toro", "nome": "Mariana Toro", "familia": "Mariana Toro", "maximo_convidados": 1, "telefone_ultimos4": "7552", "status": "" },
-        { "id": "vinicius-morani", "nome": "Vinicius Morani", "familia": "Vinicius Morani", "maximo_convidados": 1, "telefone_ultimos4": "0319", "status": "" },
+        { "id": "mariana-toro", "nome": "Mariana Toro", "familia": "Mariana Toro", "maximo_convidados": 2, "telefone_ultimos4": "7552", "status": "" },
+        { "id": "vinicius-morani", "nome": "Vinicius Morani", "familia": "Vinicius Morani", "maximo_convidados": 2, "telefone_ultimos4": "0319", "status": "" },
         { "id": "bruno-salgado", "nome": "Bruno Salgado", "familia": "Bruno Salgado", "maximo_convidados": 1, "telefone_ultimos4": "0336", "status": "" },
+        { "id": "manoel-leite", "nome": "Manoel Leite", "familia": "Manoel Leite", "maximo_convidados": 2, "telefone_ultimos4": "1028", "status": "" },
         { "id": "pedro-santos", "nome": "Pedro Santos", "familia": "Pedro Santos", "maximo_convidados": 1, "telefone_ultimos4": "9012", "status": "", "qr_liberado": true }
     ]
 }
