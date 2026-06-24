@@ -65,6 +65,11 @@
         { "id": "vinicius-morani", "nome": "Vinicius Morani", "familia": "Vinicius Morani", "maximo_convidados": 2, "telefone_ultimos4": "0319", "status": "" },
         { "id": "bruno-salgado", "nome": "Bruno Salgado", "familia": "Bruno Salgado", "maximo_convidados": 1, "telefone_ultimos4": "0336", "status": "" },
         { "id": "manoel-leite", "nome": "Manoel Leite", "familia": "Manoel Leite", "maximo_convidados": 2, "telefone_ultimos4": "1028", "status": "" },
-        { "id": "pedro-santos", "nome": "Pedro Santos", "familia": "Pedro Santos", "maximo_convidados": 1, "telefone_ultimos4": "9012", "status": "", "qr_liberado": true }
+        { "id": "pedro-santos", "nome": "Pedro Santos", "familia": "Pedro Santos", "maximo_convidados": 1, "telefone_ultimos4": "9012", "status": "", "qr_liberado": true },
+        { "id": "patricia-guimaraes", "nome": "Patricia Guimarães", "familia": "Patricia Guimarães", "maximo_convidados": 2, "telefone_ultimos4": "7468", "status": "" },
+        { "id": "miriam-teixeira", "nome": "Miriam Teixeira", "familia": "Miriam Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "4330", "status": "" },
+        { "id": "paula-teixeira", "nome": "Paula Teixeira", "familia": "Paula Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "2671", "status": "" },
+        { "id": "gabriel-campos", "nome": "Gabriel Campos", "familia": "Gabriel Campos", "maximo_convidados": 2, "telefone_ultimos4": "0156", "status": "" },
+        { "id": "fabio-teixeira", "nome": "Fabio Teixeira", "familia": "Fabio Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "2601", "status": "" }
     ]
 }
