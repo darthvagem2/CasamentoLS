@@ -70,6 +70,7 @@
         { "id": "miriam-teixeira", "nome": "Miriam Teixeira", "familia": "Miriam Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "4330", "status": "" },
         { "id": "paula-teixeira", "nome": "Paula Teixeira", "familia": "Paula Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "2671", "status": "" },
         { "id": "gabriel-campos", "nome": "Gabriel Campos", "familia": "Gabriel Campos", "maximo_convidados": 2, "telefone_ultimos4": "0156", "status": "" },
-        { "id": "fabio-teixeira", "nome": "Fabio Teixeira", "familia": "Fabio Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "2601", "status": "" }
+        { "id": "fabio-teixeira", "nome": "Fabio Teixeira", "familia": "Fabio Teixeira", "maximo_convidados": 2, "telefone_ultimos4": "2601", "status": "" },
+        { "id": "renata-nascimento", "nome": "Renata Nascimento", "familia": "Renata Nascimento", "maximo_convidados": 1, "telefone_ultimos4": "1028", "telefone_completo": "986681028", "status": "" }
     ]
 }
