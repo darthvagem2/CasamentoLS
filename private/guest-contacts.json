@@ -1,0 +1,20 @@
+{
+    "contatos": [
+        {
+            "guest_id": "joao-silva",
+            "telefone_whatsapp": "5521999991234"
+        },
+        {
+            "guest_id": "maria-oliveira",
+            "telefone_whatsapp": "5521999995678"
+        },
+        {
+            "guest_id": "pedro-santos",
+            "telefone_whatsapp": "5521999999012"
+        },
+        {
+            "guest_id": "matheus-nascimento",
+            "telefone_whatsapp": "5521976808776"
+        }
+    ]
+}

@@ -1,0 +1,566 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Convite digital de casamento com vÃ­deo de abertura, informaÃ§Ãµes do evento, mapa, mensagens carinhosas, PIX e confirmaÃ§Ã£o de presenÃ§a."
+    >
+    <title>Convite de Casamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-locked">
+    <div class="app-error-banner" id="app-error-banner" hidden role="alert"></div>
+    <div class="language-switcher" aria-label="Language switcher">
+        <button type="button" class="language-switcher__button is-active" id="lang-pt-btn">PT</button>
+        <button type="button" class="language-switcher__button" id="lang-en-btn">EN</button>
+    </div>
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background__image"></div>
+        <div class="site-background__wash"></div>
+        <div class="site-background__grain"></div>
+    </div>
+
+    <div class="site-florals site-florals--top" aria-hidden="true">
+        <span class="site-florals__sprig site-florals__sprig--left"></span>
+        <span class="site-florals__sprig site-florals__sprig--right"></span>
+    </div>
+
+    <div
+        class="opening-screen"
+        id="opening-screen"
+        aria-labelledby="opening-title"
+        aria-modal="true"
+        role="dialog"
+        tabindex="-1"
+    >
+        <div class="opening-screen__backdrop"></div>
+        <div class="opening-screen__card">
+            <div class="opening-screen__media">
+                <img
+                    src="./igreja-rio-sketch.png"
+                    alt=""
+                    class="opening-screen__art"
+                    aria-hidden="true"
+                >
+                <video
+                    id="opening-video"
+                    class="opening-video"
+                    playsinline
+                    muted
+                    loop
+                    preload="metadata"
+                >
+                    <source id="opening-video-source" src="" type="video/mp4">
+                    Seu navegador nÃ£o suporta a reproduÃ§Ã£o de vÃ­deo.
+                </video>
+                    <div class="opening-screen__placeholder" id="opening-placeholder" hidden></div>
+            </div>
+            <div class="opening-screen__content">
+                <p class="eyebrow" id="opening-overline"></p>
+                <h1 id="opening-title"></h1>
+                <p class="opening-screen__text" id="opening-text"></p>
+                <div class="opening-screen__actions">
+                    <button type="button" class="button button--ghost" id="opening-sound-btn">Ativar som</button>
+                    <button type="button" class="button button--solid" id="enter-site-btn"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="page-shell">
+        <section class="hero-banner" aria-hidden="true">
+            <img
+                src="./igreja-rio-sketch.png"
+                alt=""
+                class="hero-banner__image"
+            >
+            <div class="hero-banner__overlay"></div>
+            <div class="hero-banner__floral hero-banner__floral--left"></div>
+            <div class="hero-banner__floral hero-banner__floral--right"></div>
+        </section>
+
+        <section class="hero section section--hero">
+            <div class="hero__ornament hero__ornament--left" aria-hidden="true"></div>
+            <div class="hero__ornament hero__ornament--right" aria-hidden="true"></div>
+
+            <div class="hero__content" data-reveal>
+                <p class="eyebrow" id="hero-overline"></p>
+                <h1 class="hero__names" aria-label="Sandro Lucilene">
+                    <span>Sandro</span>
+                    <span class="hero__name-ring" aria-hidden="true">
+                        <img
+                            class="hero__name-ring-image"
+                            src="assets/imagens/aliancas.png"
+                            alt=""
+                        >
+                    </span>
+                    <span>Lucilene</span>
+                </h1>
+                <p class="hero__phrase" id="main-phrase"></p>
+
+                <div class="hero__actions">
+                    <a class="button button--solid" id="hero-primary-link" href="#rsvp"></a>
+                    <a class="button button--ghost" id="hero-secondary-link" href="#local"></a>
+                </div>
+            </div>
+
+            <aside class="hero__card" data-reveal>
+                <p class="hero__card-label" id="hero-card-label"></p>
+                <div class="hero__card-grid">
+                    <div>
+                        <span class="hero__card-caption">Data</span>
+                        <strong id="hero-date"></strong>
+                    </div>
+                    <div>
+                        <span class="hero__card-caption">Hor&aacute;rio</span>
+                        <strong id="hero-time"></strong>
+                    </div>
+                    <div>
+                        <span class="hero__card-caption">Local</span>
+                        <strong id="hero-location"></strong>
+                    </div>
+                    <div>
+                        <span class="hero__card-caption">EndereÃ§o</span>
+                        <strong id="hero-address"></strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section welcome" id="boas-vindas">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Boas-vindas</p>
+                <h2 id="welcome-title"></h2>
+            </div>
+            <div class="welcome__card" data-reveal>
+                <p id="welcome-message"></p>
+            </div>
+        </section>
+
+        <section class="section" id="informacoes">
+            <div class="section-heading" data-reveal>
+                <img class="section-heading__orchid section-heading__orchid--info" src="assets/imagens/orquideas_sem_fundo.png" alt="" aria-hidden="true">
+                <p class="eyebrow">Cerim&ocirc;nia</p>
+                <h2 id="event-section-title"></h2>
+                <p id="event-section-text"></p>
+            </div>
+
+            <div class="info-grid">
+                <article class="info-card" data-reveal>
+                    <span class="info-card__label">Noivos</span>
+                    <h3 id="info-couple-names"></h3>
+                </article>
+                <article class="info-card" data-reveal>
+                    <span class="info-card__label">Data</span>
+                    <h3 id="event-date"></h3>
+                </article>
+                <article class="info-card" data-reveal>
+                    <span class="info-card__label">Hor&aacute;rio</span>
+                    <h3 id="event-time"></h3>
+                </article>
+                <article class="info-card" data-reveal>
+                    <span class="info-card__label">Local</span>
+                    <h3 id="event-location"></h3>
+                </article>
+                <article class="info-card info-card--wide" data-reveal>
+                    <span class="info-card__label">Endere&ccedil;o completo</span>
+                    <h3 id="event-address"></h3>
+                </article>
+                <article class="info-card info-card--email" data-reveal>
+                    <span class="info-card__label">E-mail</span>
+                    <h3 class="info-card__email"><a id="contact-email" href="#"></a></h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="section location" id="local">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Mapa</p>
+                <div class="section-heading__title-row section-heading__title-row--local">
+                    <h2 id="map-title"></h2>
+                    <img class="section-heading__orchid-inline" src="assets/imagens/orquideas_sem_fundo.png" alt="" aria-hidden="true">
+                </div>
+            </div>
+
+            <div class="location__grid">
+                <div class="location__panel" data-reveal>
+                    <p class="location__label" id="map-label"></p>
+                    <h3 id="map-venue-name"></h3>
+                    <p id="map-address"></p>
+                    <a class="button button--solid" id="map-link" href="#" target="_blank" rel="noreferrer"></a>
+                </div>
+
+                <div class="map-frame" data-reveal>
+                    <iframe
+                        id="map-iframe"
+                        title="Mapa do local do casamento"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section split-section">
+            <article class="feature-card" id="traje" data-reveal>
+                <p class="eyebrow">Traje</p>
+                <p
+                    class="attire-highlight"
+                    id="attire-text"
+                ></p>
+            </article>
+
+            <article class="feature-card" id="pix" data-reveal>
+                <p class="eyebrow">Presentes</p>
+                <p id="pix-description"></p>
+                <div class="pix-box">
+                    <div>
+                        <span class="pix-box__label" id="pix-key-label">Chave PIX</span>
+                        <strong id="pix-key"></strong>
+                    </div>
+                    <button type="button" class="button button--ghost button--small" id="copy-pix-btn">
+                        Copiar chave
+                    </button>
+                </div>
+                <p class="pix-beneficiary"><span id="pix-beneficiary-label">Favorecido:</span> <span id="pix-beneficiary"></span></p>
+                <div class="pix-qr" id="pix-qr-wrapper" hidden>
+                    <img id="pix-qr-image" alt="QR Code do PIX da igreja">
+                </div>
+            </article>
+        </section>
+
+        <section class="section gifts" id="mensagens">
+            <div class="section-heading" data-reveal>
+                <img class="section-heading__orchid section-heading__orchid--mensagens" src="assets/imagens/orquideas_sem_fundo.png" alt="" aria-hidden="true">
+                <p class="eyebrow">Carinho</p>
+                <h2 id="gifts-title"></h2>
+                <p id="gifts-text"></p>
+            </div>
+
+            <div class="rsvp__layout">
+                <div class="welcome__card" data-reveal>
+                    <p id="message-section-copy"></p>
+                </div>
+
+                <div class="rsvp-card" data-reveal>
+                    <form id="message-form" novalidate>
+                        <div class="form-group">
+                            <label for="message-name">Seu nome</label>
+                            <input type="text" id="message-name" name="nome_remetente" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-email">Seu e-mail (opcional)</label>
+                            <input type="email" id="message-email" name="email_remetente" autocomplete="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-text">Mensagem</label>
+                            <textarea id="message-text" name="mensagem_carinhosa" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="button button--solid button--full" id="message-submit-btn"></button>
+                    </form>
+
+                    <p class="form-status" id="message-form-status" role="status" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section rsvp" id="rsvp">
+            <div class="rsvp__layout">
+                <div class="section-heading section-heading--left" data-reveal>
+                    <p class="eyebrow">RSVP</p>
+                    <h2 id="rsvp-title"></h2>
+                    <p id="rsvp-text"></p>
+                    <p class="rsvp__deadline" id="rsvp-deadline"></p>
+                    <p class="rsvp__hint" id="rsvp-hint"></p>
+                    <div class="countdown-card" id="countdown-card">
+                        <p class="countdown-card__label" id="countdown-title"></p>
+                        <div class="countdown-grid">
+                            <div>
+                                <strong id="countdown-days">0</strong>
+                                <span>dias</span>
+                            </div>
+                            <div>
+                                <strong id="countdown-hours">0</strong>
+                                <span>horas</span>
+                            </div>
+                            <div>
+                                <strong id="countdown-minutes">0</strong>
+                                <span>min</span>
+                            </div>
+                            <div>
+                                <strong id="countdown-seconds">0</strong>
+                                <span>seg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rsvp-card" data-reveal>
+                    <form id="rsvp-form" novalidate>
+                        <div class="form-group">
+                            <label for="guest-name">Primeiro e Ãºltimo nome</label>
+                            <input type="text" id="guest-name" name="nome" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-last4">Ãšltimos 4 dÃ­gitos do telefone</label>
+                            <input
+                                type="text"
+                                id="phone-last4"
+                                name="telefone_ultimos4"
+                                inputmode="numeric"
+                                maxlength="4"
+                                pattern="[0-9]{4}"
+                                autocomplete="off"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group" id="guest-count-group">
+                            <label for="guest-count" id="guest-count-label">Quantidade de convidados</label>
+                            <select id="guest-count" name="quantidade_convidados" required disabled>
+                                <option value="" id="guest-count-placeholder">Preencha nome e telefone para liberar as opÃ§Ãµes</option>
+                            </select>
+                            <p class="rsvp__hint" id="guest-count-help"></p>
+                        </div>
+
+                        <fieldset class="form-group form-group--choice">
+                            <legend>ConfirmaÃ§Ã£o</legend>
+
+                            <label class="choice-card">
+                                <input type="radio" name="attending" value="sim" required>
+                                <span class="choice-card__indicator"></span>
+                                <span class="choice-card__content">
+                                    <strong id="attending-yes-label"></strong>
+                                    <small>Seu nome serÃ¡ registrado como confirmado.</small>
+                                </span>
+                            </label>
+
+                            <label class="choice-card">
+                                <input type="radio" name="attending" value="nao" required>
+                                <span class="choice-card__indicator"></span>
+                                <span class="choice-card__content">
+                                    <strong id="attending-no-label"></strong>
+                                    <small>Vamos registrar sua resposta com carinho.</small>
+                                </span>
+                            </label>
+                        </fieldset>
+
+                        <button type="submit" class="button button--solid button--full" id="rsvp-submit-btn"></button>
+                    </form>
+
+                    <p class="form-status" id="rsvp-message" role="status" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section guest-access" id="acesso-convidado">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Acesso</p>
+                <h2 id="guest-pass-title"></h2>
+                <p id="guest-pass-text"></p>
+            </div>
+
+            <div class="guest-access__layout">
+                <article class="guest-pass-card" data-reveal>
+                    <span class="status-badge status-badge--warning" id="guest-pass-badge"></span>
+                    <h3 id="guest-pass-name"></h3>
+                    <div class="guest-pass-grid">
+                        <div>
+                            <span class="guest-pass-grid__label">Status</span>
+                            <strong id="guest-pass-status"></strong>
+                        </div>
+                        <div>
+                            <span class="guest-pass-grid__label">Resposta enviada</span>
+                            <strong id="guest-pass-response"></strong>
+                        </div>
+                    </div>
+                    <p class="guest-pass-message" id="guest-pass-message"></p>
+                    <p class="guest-pass-help" id="guest-pass-help"></p>
+                </article>
+
+                <article class="guest-pass-card guest-pass-card--qr" data-reveal>
+                    <div class="qr-preview qr-preview--guest" id="guest-pass-qr">
+                        <p class="guest-pass-placeholder" id="guest-pass-placeholder"></p>
+                    </div>
+                    <div class="utility-actions">
+                        <a
+                            class="button button--solid"
+                            id="guest-pass-link"
+                            href="guest-status.html"
+                            target="_blank"
+                            rel="noreferrer"
+                        ></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section admin-access" id="admin-access">
+            <div class="admin-access__intro" data-reveal>
+                <button type="button" class="admin-access__trigger" id="admin-access-trigger" aria-expanded="false">
+                    Acesso reservado
+                </button>
+            </div>
+
+            <div class="admin-access__unlock" id="admin-unlock" hidden>
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Privado</p>
+                    <h2 id="admin-access-title"></h2>
+                    <p id="admin-access-text"></p>
+                </div>
+
+                <form class="admin-access__form" id="admin-access-form" data-reveal>
+                    <div class="form-group">
+                        <label for="admin-code" id="admin-code-label"></label>
+                        <input
+                            type="password"
+                            id="admin-code"
+                            autocomplete="off"
+                            placeholder=""
+                            spellcheck="false"
+                            required
+                        >
+                    </div>
+                    <div class="utility-actions utility-actions--centered">
+                        <button type="submit" class="button button--solid" id="admin-unlock-btn"></button>
+                    </div>
+                </form>
+
+                <p class="form-status form-status--centered" id="admin-access-message" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="admin-panel" id="admin-panel" hidden>
+                <div class="section-heading section-heading--center" data-reveal>
+                    <p class="eyebrow">Admin</p>
+                    <h2 id="admin-panel-title"></h2>
+                    <p id="admin-panel-text"></p>
+                </div>
+
+                <div class="admin-stats" data-reveal>
+                    <article class="admin-stat">
+                        <span class="admin-stat__label" id="admin-stat-total-label"></span>
+                        <strong id="admin-stat-total">0</strong>
+                    </article>
+                    <article class="admin-stat">
+                        <span class="admin-stat__label" id="admin-stat-confirmed-label"></span>
+                        <strong id="admin-stat-confirmed">0</strong>
+                    </article>
+                    <article class="admin-stat">
+                        <span class="admin-stat__label" id="admin-stat-pending-label"></span>
+                        <strong id="admin-stat-pending">0</strong>
+                    </article>
+                </div>
+
+                <div class="admin-dashboard">
+                    <article class="admin-module" data-reveal>
+                        <p class="eyebrow">Scanner</p>
+                        <h3 id="admin-scanner-title"></h3>
+                        <p id="admin-scanner-text"></p>
+
+                        <div class="utility-actions utility-actions--centered">
+                            <button type="button" class="button button--solid" id="admin-start-scan-btn"></button>
+                            <button type="button" class="button button--ghost" id="admin-stop-scan-btn"></button>
+                        </div>
+
+                        <div class="admin-reader" id="admin-reader" hidden></div>
+                        <p class="admin-reader__hint" id="admin-reader-hint"></p>
+
+                        <div class="form-group">
+                            <label for="admin-manual-qr">ValidaÃ§Ã£o manual</label>
+                            <textarea
+                                id="admin-manual-qr"
+                                class="admin-manual-input"
+                                rows="4"
+                                placeholder=""
+                            ></textarea>
+                        </div>
+
+                        <div class="utility-actions utility-actions--centered">
+                            <button type="button" class="button button--ghost" id="admin-validate-manual-btn"></button>
+                        </div>
+
+                        <p class="form-status form-status--centered" id="admin-scan-message" role="status" aria-live="polite"></p>
+                    </article>
+
+                    <article class="admin-module" data-reveal>
+                        <p class="eyebrow">Entradas</p>
+                        <h3 id="admin-entries-title"></h3>
+                        <p id="admin-entries-text"></p>
+                        <div class="admin-entries-list" id="admin-entries-list"></div>
+                    </article>
+
+                    <article class="admin-module" data-reveal>
+                        <p class="eyebrow">Mensagens</p>
+                        <h3 id="admin-messages-title"></h3>
+                        <p id="admin-messages-text"></p>
+                        <div class="admin-entries-list" id="admin-messages-list"></div>
+                    </article>
+
+                    <article class="admin-module" data-reveal>
+                        <p class="eyebrow">Controles</p>
+                        <h3 id="admin-controls-title">Gerenciamento</h3>
+                        <p id="admin-security-text"></p>
+
+                        <div class="utility-actions utility-actions--centered">
+                            <button type="button" class="button button--ghost" id="admin-clear-entries-btn"></button>
+                            <button type="button" class="button button--ghost" id="admin-reset-storage-btn"></button>
+                            <button type="button" class="button button--ghost" id="admin-copy-report-btn"></button>
+                            <button type="button" class="button button--ghost" id="admin-export-csv-btn"></button>
+                            <button type="button" class="button button--ghost" id="admin-export-pdf-btn"></button>
+                            <button type="button" class="button button--solid" id="admin-logout-btn"></button>
+                        </div>
+
+                        <p class="form-status form-status--centered" id="admin-controls-message" role="status" aria-live="polite"></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p id="footer-contact-line"></p>
+        <p id="footer-signature"></p>
+    </footer>
+
+    <div class="site-florals site-florals--bottom" aria-hidden="true">
+        <span class="site-florals__sprig site-florals__sprig--left"></span>
+        <span class="site-florals__sprig site-florals__sprig--right"></span>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore-compat.js"></script>
+    <script>
+        (function initializeFirebase() {
+            if (!window.firebase || !window.config || !window.config.firebase || window.config.firebase.habilitado !== true) {
+                return;
+            }
+
+            try {
+                const app = window.firebase.apps.length
+                    ? window.firebase.app()
+                    : window.firebase.initializeApp(window.config.firebase.config);
+                window.firebaseDb = window.firebase.firestore(app);
+            } catch (error) {
+                console.error("NÃ£o foi possÃ­vel inicializar o Firebase.", error);
+            }
+        })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

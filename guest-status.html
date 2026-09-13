@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        http-equiv="Cache-Control"
+        content="no-cache, no-store, must-revalidate"
+    >
+
+    <meta
+        http-equiv="Pragma"
+        content="no-cache"
+    >
+
+    <meta
+        http-equiv="Expires"
+        content="0"
+    >
+
+    <title>Status do Convidado</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css?v=20260913-3"
+    >
+</head>
+
+<body class="utility-page utility-page--status">
+
+    <main class="utility-shell">
+
+        <section class="utility-card utility-card--status">
+
+            <p class="eyebrow">
+                QR personalizado
+            </p>
+
+            <h1 id="status-title"></h1>
+
+            <p
+                class="utility-copy"
+                id="status-text"
+            ></p>
+
+
+            <div
+                class="status-panel status-panel--loading"
+                id="status-panel"
+            >
+
+                <span
+                    class="status-badge"
+                    id="status-badge"
+                >
+                    Carregando...
+                </span>
+
+                <h2 id="guest-name">
+                    Verificando convidado...
+                </h2>
+
+                <p id="guest-detail"></p>
+
+                <p id="guest-event"></p>
+
+            </div>
+
+            <section
+                class="status-qr"
+                id="status-qr"
+                hidden
+            >
+
+                <p class="eyebrow">
+                    QR Code do convidado
+                </p>
+
+                <div
+                    class="qr-preview qr-preview--status"
+                    id="status-qr-preview"
+                ></div>
+
+                <p
+                    class="status-qr-link"
+                    id="status-qr-link"
+                ></p>
+
+                <div class="utility-actions utility-actions--compact">
+
+                    <button
+                        type="button"
+                        class="button button--ghost"
+                        id="copy-status-link-btn"
+                    >
+                        Copiar link do QR
+                    </button>
+
+                    <button
+                        type="button"
+                        class="button button--ghost"
+                        id="download-status-qr-btn"
+                    >
+                        Baixar QR
+                    </button>
+
+                </div>
+
+            </section>
+
+            <div class="utility-actions">
+
+                <button
+                    type="button"
+                    class="button button--solid"
+                    id="speak-status-btn"
+                >
+                    Ouvir novamente
+                </button>
+
+                <a
+                    class="button button--ghost"
+                    href="index.html"
+                >
+                    Voltar ao convite
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!--
+        Número de versão proposital.
+        Faz navegadores antigos baixarem novamente os arquivos.
+    -->
+
+    <script src="config.js?v=20260913-2"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="status.js?v=20260913-3"></script>
+
+</body>
+
+</html>
