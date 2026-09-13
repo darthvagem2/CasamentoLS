@@ -1,6 +1,6 @@
 {
     "convidados": [
-        { "id": "marcos-peres", "nome": "Marcos Peres", "familia": "Marcos Peres", "maximo_convidados": 1, "telefone_ultimos4": "0304", "status": "" },
+        { "id": "marcos-peres", "nome": "Marcos Peres", "familia": "Marcos Peres", "maximo_convidados": 1, "telefone_ultimos4": "0304", "status": "", "qr_liberado": true },
         { "id": "paulo-garcia", "nome": "Paulo Garcia", "familia": "Paulo Garcia", "maximo_convidados": 4, "telefone_ultimos4": "6730", "status": "" },
         { "id": "hugo-mota", "nome": "Hugo Mota", "familia": "Hugo Mota", "maximo_convidados": 3, "telefone_ultimos4": "6488", "status": "" },
         { "id": "leonardo-novelino", "nome": "Leonardo Novelino", "familia": "Leonardo Novelino", "maximo_convidados": 2, "telefone_ultimos4": "0077", "status": "" },
